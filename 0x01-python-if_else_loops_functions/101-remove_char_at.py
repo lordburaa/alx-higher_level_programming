@@ -1,4 +1,4 @@
-#!/usr/bin/ython3
+#!/usr/bin/python3
 def remove_char_at(str, n):
     ptr = str
     if (n >= 0):
