@@ -2,7 +2,7 @@
 import dis
 def magic_calculation(a, b, c):
     if(a < b):
-        return
+        return c
     if (c > b):
-        return
+        return a + b
     return a * b - c
