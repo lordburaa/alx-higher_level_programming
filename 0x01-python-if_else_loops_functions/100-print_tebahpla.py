@@ -5,4 +5,4 @@ for i in range(122, 96, -1):
         j = chr(i)
     else:
         j = chr(i - 32)
-        print("{}".format(j), end="")
+    print("{}".format(j), end="")
