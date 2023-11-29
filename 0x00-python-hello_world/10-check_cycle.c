@@ -6,8 +6,6 @@
  */
 int check_cycle(listint_t *list)
 {
-	if (list == NULL)
-		return (-1);
 	if (list->next == NULL)
 		return (0);
 	else
