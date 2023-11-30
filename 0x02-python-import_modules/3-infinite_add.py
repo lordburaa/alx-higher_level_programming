@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__ = "__name__"
+if __name__ == "__main__":
     import sys
 temp = int(0)
 summ = bin(0)
