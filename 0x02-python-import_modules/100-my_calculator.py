@@ -18,4 +18,4 @@ if (k == -1):
 k = k - 1
 fun = [calculator_1.add, calculator_1.sub, calculator_1.mul, calculator_1.div]
 print("{} {} {} = {}".format(int(sys.argv[1]), sys.argv[2], int(sys.argv[3]),
-                             fun[k](int(sys.argv[1]), int(sys.argv[3]))))
+                             int(fun[k](int(sys.argv[1]), int(sys.argv[3])))))
