@@ -4,8 +4,10 @@ if __name__ = "__name__"
 temp = int(0)
 summ = bin(0)
 u = len(sys.argv)
-for i in range(1, u):
-    temp = temp + int(sys.argv[i])
-    summ = bin(temp) or summ
-
+if u != 1:
+    for i in range(1, u):
+        temp = temp + int(sys.argv[i])
+        summ = bin(temp) or summ
+else:
+    summ += bin(temp)
 print("{}".format((int(summ, 2))))
