@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     import sys
     import calculator_1
-k = -1
+k = int(-1)
 u = len(sys.argv)
 if (u < 4):
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -12,6 +12,7 @@ for i in operator:
     if (i == sys.argv[2]):
         k = 1 + k
         break
+    k += 1
 if (k == -1):
     print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
