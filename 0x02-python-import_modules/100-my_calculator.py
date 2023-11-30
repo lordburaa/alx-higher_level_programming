@@ -4,8 +4,8 @@ if __name__ == "__main__":
     import calculator_1
 k = -1
 u = len(sys.argv)
-if (u != 4):
-    print("Usage: {} <operator> <b>", format(sys.argv[0]))
+if (u < 4):
+    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
 operator = {'+', '-', '*', '/'}
 for i in operator:
