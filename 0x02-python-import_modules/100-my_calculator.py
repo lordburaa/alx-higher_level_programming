@@ -5,7 +5,7 @@ if __name__ == "__main__":
 k = -1
 u = len(sys.argv)
 if (u != 4):
-    print("Usage: {} <operator> <b>", sys.argv[0])
+    print("Usage: {} <operator> <b>", format(sys.argv[0]))
     exit(1)
 operator = {'+', '-', '*', '/'}
 for i in operator:
