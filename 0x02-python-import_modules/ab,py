@@ -1,0 +1,49 @@
+
+Usage:
+  uncompyle6 [OPTIONS]... [ FILE | DIR]...
+  uncompyle6 [--help | -h | --V | --version]
+
+Examples:
+  uncompyle6      foo.pyc bar.pyc       # decompile foo.pyc, bar.pyc to stdout
+  uncompyle6 -o . foo.pyc bar.pyc       # decompile to ./foo.pyc_dis and ./bar.pyc_dis
+  uncompyle6 -o /tmp /usr/lib/python1.5 # decompile whole library
+
+Options:
+  -o <path>     output decompiled files to this path:
+                if multiple input files are decompiled, the common prefix
+                is stripped from these names and the remainder appended to
+                <path>
+                  uncompyle6 -o /tmp bla/fasel.pyc bla/foo.pyc
+                    -> /tmp/fasel.pyc_dis, /tmp/foo.pyc_dis
+                  uncompyle6 -o /tmp bla/fasel.pyc bar/foo.pyc
+                    -> /tmp/bla/fasel.pyc_dis, /tmp/bar/foo.pyc_dis
+                  uncompyle6 -o /tmp /usr/lib/python1.5
+                    -> /tmp/smtplib.pyc_dis ... /tmp/lib-tk/FixTk.pyc_dis
+  --compile | -c <python-file>
+                attempts a decompilation after compiling <python-file>
+  -d            print timestamps
+  -p <integer>  use <integer> number of processes
+  -r            recurse directories looking for .pyc and .pyo files
+  --fragments   use fragments deparser
+  --verify      compare generated source with input byte-code
+  --verify-run  compile generated source, run it and check exit code
+  --syntax-verify compile generated source
+  --linemaps    generated line number correspondencies between byte-code
+                and generated source output
+  --encoding  <encoding>
+                use <encoding> in generated source according to pep-0263
+  --help        show this message
+
+Debugging Options:
+  --asm     | -a        include byte-code       (disables --verify)
+  --grammar | -g        show matching grammar
+  --tree={before|after}
+  -t {before|after}     include syntax before (or after) tree transformation
+                        (disables --verify)
+  --tree++ | -T         add template rules to --tree=before when possible
+
+Extensions of generated files:
+  '.pyc_dis' '.pyo_dis'   successfully decompiled (and verified if --verify)
+    + '_unverified'       successfully decompile but --verify failed
+    + '_failed'           decompile failed (contact author for enhancement)
+
