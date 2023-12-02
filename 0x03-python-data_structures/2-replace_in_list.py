@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def replace_in_list(my_list, idx, element):
     leng = len(my_list)
     if (idx < 0):
@@ -7,5 +8,3 @@ def replace_in_list(my_list, idx, element):
     else:
         my_list[idx] = element
         return my_list
-
-
