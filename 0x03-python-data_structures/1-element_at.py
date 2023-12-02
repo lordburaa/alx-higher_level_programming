@@ -1,11 +1,10 @@
 def element_at(my_list, idx):
     num = 0
     leng = len(my_list)
-    if (idx >= leng):
-        return None
     if (idx < 0):
         return None
+    if idx >= leng:   
+        return None
 
-    new_list = my_list.pop(idx)
-    return new_list
+    return my_list[idx]
     
