@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
-    leng = len(my_list) - 1
-    if (leng == -1):
+    
+    if not my_list:
         return None
     new_list = my_list
-    for i in range(leng, -1, -1):
-        print("{}".format(new_list[i]))
+    for i in range(len(my_list)):
+        print("{:d}".format(new_list[i]))
     return new_list
