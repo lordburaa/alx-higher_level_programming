@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     leng = len(sentence)
+    temp = sentence.split() + ["he"]
     if (sentence == ""):
-        sentence[0] = None
-    return (leng, sentence[0])
+        temp[0] = None
+    return (leng, temp[0])
