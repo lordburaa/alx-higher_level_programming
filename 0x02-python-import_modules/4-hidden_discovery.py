@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import hidden_4
-    for i in (dir(hidden_4)):
-        if (ord(i[1]) != ord('_')):
-             print(f"{i}")
+    fl = dir(hidden_4)
+    leng = len(fl)
+    for i in range(leng):
+        if (fl[i][0:2] != "__"):
+             print(fl[i])
