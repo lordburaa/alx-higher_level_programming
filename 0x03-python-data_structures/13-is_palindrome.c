@@ -7,63 +7,61 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *nhead, *tort, *hare, *ptort;
-	listint_t *cut = NULL, *half, *it1, *it2;
+	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
 
-	if (!head || *head)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
-	nhead = *head;
-	if (nhead->next != NULL)
+	while (1)
 	{
-		for (hare = nhead, tort = nhead; hare != NULL && hare->next != NULL;
-				ptort = tort, tort = tort->next)
-			hare = hare->next->next;
-		if (hare != NULL)
+		fast = fast->next->next;
+		if (!fast)
 		{
-			cut = tort;
-			tort = tort->next;
+			dup = slow->next;
+			break;
 		}
-		ptort->next = NULL;
-		half = tort;
-		it1 = reverse_listint(&half);
-		for (it2 = *head; it2; it1 = it1->next, it2 = it2->next)
+		if (!fast->next)
 		{
-
-			if (it2->n != it1->n)
-				return (0);
+			dup = slow->next->next;
+			break;
 		}
-		if (cut == NULL)
-			ptort->next = half;
-		else
-		{
-			ptort->next = cut;
-			cut->next = half;
-		}
+		slow = slow->next;
 	}
-	return (1);
+
+	reverse_listint(&dup);
+
+	while (dup && temp)
+	{
+		if (temp->n == dup->n)
+		{
+			dup = dup->next;
+			temp = temp->next;
+		}
+		else
+			return (0);
+	}
+	if (!dup)
+		return (1);
+	return (0);
 }
 /**
  * reverse_listint- reverse linked list
  * @head: pointer to the first item
  * Return: new head of reversed list
  */
-listint_t *reverse_listint(listint_t **head)
+void reverse_listint(listint_t **head)
 {
 	listint_t *next = NULL, *prev = NULL;
+	listint_t *current = *head;
 
-	if (!head || !*head)
-		return (NULL);
-	while ((*head)->next)
+	while (current)
 	{
-		next = (*head)->next;
-		(*head)->next = prev;
+		next = current->next;
+		current->next = prev;
 
-		prev = *head;
+		prev = current;
 
-		*head = next;
+		current = next;
 	}
-	(*head)->next = prev;
-
-	return (*head);
+	*head = prev;
 }
