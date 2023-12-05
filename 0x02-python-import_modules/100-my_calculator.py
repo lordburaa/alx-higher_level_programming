@@ -16,7 +16,7 @@ if __name__ == "__main__":
         elif operator == '-':
             print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
         elif operator == '*':
-            print("{:d} * {:d} = {:d}".format(a, b, mult(a, b)))
+            print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
         elif operator == '/':
             print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
     else:
