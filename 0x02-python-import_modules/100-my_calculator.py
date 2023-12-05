@@ -6,19 +6,24 @@ if __name__ == "__main__":
     if argcc != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
+    op = 0
     operator = sys.argv[2]
     leng = len(sys.argv[2])
     if (leng == 1):
         a = int(sys.argv[1])
         b = int(sys.argv[3])
         if operator == '+':
+            op = 1
             print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
         elif operator == '-':
+            op = 1
             print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
         elif operator == '*':
+            op = 1
             print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
         elif operator == '/':
+            op = 1
             print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
-    else:
+    if op == 0 or leng != 1:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
