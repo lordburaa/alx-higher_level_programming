@@ -1,11 +1,11 @@
 #!/bin/python3
-def square(new=[]):
+def square(new):
     temp = []
-    if (len(new) == 0):
-        return (new)
-    else:
-        for i in new:
-            temp.append(i*i)
+    if (type(new) == int):
+        return (new * new)
+    
+    for i in new:
+        temp.append(i*i)
     return (temp)
 
 
