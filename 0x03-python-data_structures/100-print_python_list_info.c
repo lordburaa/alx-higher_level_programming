@@ -1,3 +1,8 @@
+#include <stdio.h>
+
+struct timespec;
+
+#include <time.h>
 #include <Python.h>
 #include <object.h>
 #include <listobject.h>
@@ -9,14 +14,22 @@
 
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t count;
-	Py_ssize_t length = PyList_Size(p);
-	PyListObject *pObj = (PyListObject *)p;
+	struct timespec;
+	Py_ssize_t i, py_list_size;
+	PyObject *item;
+	const char *item_t;
+	PyListObject *list_object_cast;
 
-	printf("[*] Size of the python List = %li\n", length);
-	printf("[*] Allocated = %ld\n", pObj->allocated);
-	for (count = 0; count < length; count++)
+	list_object_cast = (PyListObject *)p;
+	py_list_size = PyList_Size(p);
+
+	printf("[*] Size of the python List = %d\n", (int) py_list_size);
+	printf("[*] Allocated = %d\n", (int)list_object_cast->allocated);
+	for (i = 0; i < py_list_size; i++)
 	{
-		printf("Element %ld; %s\n", count, Py_TYPE(pObj->ob_item[count])->tp_name);
+		item = PyList_GetItem(p, i);
+		item_t = Py_TYPE(item)->tp_name;
+		printf("Element %d: %s\n", (int) i, item_t);
+
 	}
 }
