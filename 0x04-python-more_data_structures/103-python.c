@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+struct timespec;
 #include <Python.h>
-
 /**
  * print_python_bytes - print info
  * @p: addres
@@ -18,7 +18,7 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 	size = ((PyVarObject *)p)->ob_size;
-	str = ((PyBytesObject *)p)ob_sval;
+	str = ((PyBytesObject *)p)->ob_sval;
 	len = size + 1 > 10 ? 10  : size + 1;
 	printf("  size: %lu\n", size);
 	printf("  trying string: %s\n", str);
@@ -31,12 +31,12 @@ void print_python_bytes(PyObject *p)
  * print_pyton_list - print info
  * @p: addres
  */
-void print_pyton_list(PyObject *p)
+void print_python_list(PyObject *p)
 {
 	int i;
 
 	printf("[*] Python list info\n");
-	printf("[*] Size of the Python List = %lu\n", ((PyVarObjecy *)p)->ob_size);
+	printf("[*] Size of the Python List = %lu\n", ((PyVarObject *)p)->ob_size);
 	printf("[*] Allocated = %lu\n", ((PyListObject *)p)->allocated);
 	for (i = 0; i < ((PyVarObject *)p)->ob_size; i++)
 	{
