@@ -1,14 +1,6 @@
 #!/bin/python3
-def square(new):
-    temp = []
-    if (type(new) == int):
-        return (new * new)
-    
-    for i in new:
-        temp.append(i*i)
-    return (temp)
-
-
 def square_matrix_simple(matrix=[]):
-    new = list(map(square, matrix))
-    return new
+    new_matrix = matrix.copy()
+    for row in range(len(new_matrix)):
+        new_matrix[row] = list(map(lambda x: x ** 2, new_matrix[row]))
+    return new_matrix
