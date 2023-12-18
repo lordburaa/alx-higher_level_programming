@@ -2,7 +2,7 @@
 import sys
 
 
-def safe_function(fct, *arg):
+def safe_function(fct, *args):
 
     try:
         return fct(*args)
