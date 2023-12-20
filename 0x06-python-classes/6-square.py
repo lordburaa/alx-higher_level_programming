@@ -14,14 +14,15 @@ class Square:
         return the sqare of the input"""
         if (self.__size == 0):
             print()
-        for i in range(self.__size):
-            for k in range(self.__position[0]):
-                print("_", end="")
+        if self.__size > 0:
+            for i in range(self.__size):
+                for k in range(self.__position[0]):
+                    print("_", end="")
 
-            for k in range(self.__size):
-                print("#", end="")
-            print()
+                for k in range(self.__size):
+                    print("#", end="")
 
+                print()
     def my_print(self):
         """print the are"""
         for i in range(self.__position[1]):
