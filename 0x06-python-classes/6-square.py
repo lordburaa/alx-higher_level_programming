@@ -24,7 +24,8 @@ class Square:
 
     def my_print(self):
         """print the are"""
-
+        for i in range(self.__position[1]):
+            print()
         self.area()
 
     @property
