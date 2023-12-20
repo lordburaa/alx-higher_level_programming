@@ -3,10 +3,10 @@
 
 class Square:
     """reperesents a square """
-    def __init(self, size=0):
+    def __init__(self, size=0):
         """itnitalize the square"""
         self.size = size
-    def ara(self):
+    def area(self):
         """calculate the square"""
         return (self.__size) ** 2
     @property
