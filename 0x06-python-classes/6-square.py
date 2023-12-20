@@ -15,14 +15,16 @@ class Square:
         if (self.__size == 0):
             print()
         for i in range(self.__size):
-            for i in range(self.position[0]):
+            for k in range(self.__position[0]):
                 print("_", end="")
+
             for k in range(self.__size):
                 print("#", end="")
             print()
 
     def my_print(self):
         """print the are"""
+
         self.area()
 
     @property
@@ -44,8 +46,8 @@ class Square:
         return self.__position
 
     @position.setter
-    def position(self, position):
-        if type(position) is not tuple and len(position) is not 2:
+    def position(self, value):
+        if type(value) is not tuple and len(value) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             for ele in positon:
