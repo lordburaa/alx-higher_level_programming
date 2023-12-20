@@ -11,6 +11,8 @@ class Square:
     def area(self):
         """calculate area
         return the sqare of the input"""
+        if (self.__size == 0):
+            print()
         for i in range(self.__size):
             for k in range(self.__size):
                 print("#", end="")
