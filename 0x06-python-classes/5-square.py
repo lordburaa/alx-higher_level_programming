@@ -11,12 +11,15 @@ class Square:
     def area(self):
         """calculate area
         return the sqare of the input"""
-        for  i in range(self.__size):
+        for i in range(self.__size):
             for k in range(self.__size):
                 print("#", end="")
             print()
+
     def my_print(self):
+        """print the are"""
         self.area()
+
     @property
     def size(self):
         return self.__size
