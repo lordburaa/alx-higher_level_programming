@@ -3,6 +3,10 @@
   """
 class Square():
     """Define square"""
+
+    def __str__(self):
+        """teach oython to print thesquare my way"""
+        return self.pos_print()[:-1]
     def __init__(self, size=0, position=(0, 0)):
         self.size =size
         self.position = position
@@ -30,18 +34,19 @@ class Square():
             else:
                 raise ValueError("size must be >= 0")
         else:
-            raise TypeError("size must be an iner=ger")
+            raise TypeError("size must be an inerger")
 
     @property
     def position(self):
-
         return self.__position
     def position(self, vlaue):
-        if type(value) is tuple and len(value) is 2 and \
-                type(value[0]) is int and type(value[1]) is int:
-                    self.__position = value
-        else:
-            raise TypeError("position must be tuple of 2 positive integers")
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len([i for i in value if isinstance(i, int) and i >= 0]) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value 
     def area(self):
         """return the current square area"""
         return self.__size ** 2
