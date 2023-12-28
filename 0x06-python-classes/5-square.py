@@ -24,6 +24,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             return self.__size ** 2
+
     def my_print(self):
         if self.__size == 0:
             print()
@@ -32,6 +33,7 @@ class Square:
                 for i in range(self.__size):
                     print('#', end="")
                 print()
+
     @property
     def size(self):
         if not isinstance(self.__size, int):
