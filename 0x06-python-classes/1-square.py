@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""empty square"""
+"""empty class"""
 
 
 class Square:
-    """Represent square"""
-    def __init__(self, size):
-        self._Square__size = size
-        self.__size = size
+    """Empty clas"""
+
+    def __init__(self, si):
+        self.__size = si
+        pass
