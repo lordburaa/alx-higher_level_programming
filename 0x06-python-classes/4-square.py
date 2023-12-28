@@ -26,8 +26,6 @@ class Square:
     @property
     def size(self):
         return self.__size
-        
-        return "size must be an integer"
     
     @size.setter
     def size(self, value):
