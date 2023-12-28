@@ -17,4 +17,5 @@ class Square:
         """findig the area
          return the square of size
          """
+
         return self.__size * self.__size
