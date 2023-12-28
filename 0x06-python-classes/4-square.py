@@ -30,4 +30,6 @@ class Square:
     @size.setter
     def size(self, value):
         """Set a new value"""
+        if not isinstance(self.__size, int):
+            raise TypeError("size must be an inetger")
         self.__size = value
