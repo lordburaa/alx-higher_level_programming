@@ -25,6 +25,8 @@ class Square:
     
     @property
     def size(self):
+        if not isinstance(self.__size, int):
+            raise TypeError("size must be an itneger")
         return self.__size
     
     @size.setter
