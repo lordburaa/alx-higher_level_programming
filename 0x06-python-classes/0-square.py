@@ -2,4 +2,6 @@
 
 class Square:
     """Class Square the number"""
-    pass
+    def __init__(self):
+        """Initialization"""
+        pass
