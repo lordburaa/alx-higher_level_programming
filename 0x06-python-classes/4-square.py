@@ -36,4 +36,5 @@ class Square:
         """Set a new value"""
         if not isinstance(self.__size, int):
             raise TypeError("size must be an inetger")
-        self.__size = value
+        else:
+            self.__size = value
