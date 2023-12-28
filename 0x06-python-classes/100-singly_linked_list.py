@@ -37,7 +37,7 @@ class Node:
 
         self.__next_node = value
 
-class SinglyLinkedList:
+class SinglyLinkedList():
     """defines a singly linked list"""
     def __init__(self):
         """initialize the singly linked list"""
@@ -46,25 +46,19 @@ class SinglyLinkedList:
         """make list printable"""
 
         prints = ""
-        location = self.head
-        while location:
-            prints += str(location.data) + "\n"
-            location = location.next_node
+        location = self.__head
+
+        if location is not None:
+            while location is not None:
+                prints += str(location.data) + "\n"
+                location = location.next_node
         return prints[:-1]
     def sorted_insert(self, value):
         """insert in sorted fashion"""
-        
-        new = Node(value)
-        if not self.head:
-            self.head = new
-            return
-        if value < self.head.data:
-            new.next_node = self.head
-            self.head = new
-            return
-        location = self.head
-        while location.next_node and location.next_node.data < value:
-            location = location.next_node
-        if location.next_node:
-            new.next_nodee = location.next_node
-        location.next_node = new
+        node = self.__head
+        if node is None or self.__head.data >= value:
+            self.__head = Node(value, self.__head)
+        else:
+            while node.next_node is not None and node.next_node.data < value:
+                node = node.next_node
+                node.next_node = Node(value, node.next_node)
