@@ -28,13 +28,13 @@ class Square:
 
     def my_print(self):
         if self.__size == 0:
-            print()
             for k in range(self.__position[0]):
                 if (self.__position[1] > 0):
                     print("_", end="")
                     continue
                 else:
                     print(" ", end="")
+            print()
             
         else: 
             for i in range(self.__size):
