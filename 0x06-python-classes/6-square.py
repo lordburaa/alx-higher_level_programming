@@ -32,7 +32,7 @@ class Square:
         else:
             for i in range(self.__size):
                 for k in range(self.__position[0]):
-                    print("_", end="")
+                    print(" ", end="")
                 for i in range(self.__size):
                     print('#', end="")
                 print()
