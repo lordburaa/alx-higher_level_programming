@@ -57,7 +57,7 @@ class SinglyLinkedList():
                 sll_str += str(node.data) + '\n'
                 node = node.next_node
 
-        return sll_str[:-1]
+        return sll_str[0:]
 
     def sorted_insert(self, value):
         node = self.__head
