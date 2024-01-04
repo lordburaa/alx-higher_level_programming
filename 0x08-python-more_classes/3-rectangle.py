@@ -21,10 +21,12 @@ class Rectangle:
 
     def __str__(self):
         string = ""
+        if (self.__height == 0 or self.__width == 0):
+            return string
         for i in range(self.__height):
             for _ in range(self.__width):
                 string += '#'
-            if i != self.__height -1:
+            if i != self.__height - 1:
                 string += '\n'
         return string
 
