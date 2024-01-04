@@ -5,8 +5,14 @@ class Rectangle:
     """Empty rectangle"""
     
     def __init__(self, width=0, height=0):
-        self.__height = height
-        self.__width = width
+        if isinstance(height, int):
+            self.__height = height
+        else:
+            raise TypeError("height must be >= 0")
+        if isinstance(widht, int):
+            self.__width = width
+        else:
+            riase TypeError("width must be >= 0")
     
     @property
     def width(self):
