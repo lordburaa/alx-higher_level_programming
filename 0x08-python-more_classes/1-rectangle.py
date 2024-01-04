@@ -5,6 +5,8 @@ class Rectangle:
     """Empty rectangle"""
     
     def __init__(self, width=0, height=0):
+        """Initializeation of widht and height"""
+
         if not isinstance(height, int) or  height < 0:
             raise TypeError("height must be >= 0")
         self.__height = height
@@ -15,11 +17,11 @@ class Rectangle:
     
     @property
     def width(self):
-        return self.width
+        return self.__width
     
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @width.setter
     def width(self, value):
