@@ -12,7 +12,7 @@ class Rectangle:
         if isinstance(widht, int):
             self.__width = width
         else:
-            riase TypeError("width must be >= 0")
+            raise TypeError("width must be >= 0")
     
     @property
     def width(self):
