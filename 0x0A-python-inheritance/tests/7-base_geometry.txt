@@ -2,6 +2,11 @@ Base  geometry
 
 
 	>>> integer_validator("alx", 56):
+
+	>>> integer_validator("alx",-4)
+	Traceback (most recent call last):
+		...
+	ValueError: my_int must be greater than 0
 	
 
 		
