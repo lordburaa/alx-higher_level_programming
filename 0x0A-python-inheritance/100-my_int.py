@@ -3,8 +3,8 @@
 
 
 class MyInt(int):
-    """creating my int class 
-        
+    """creating my int class
+
         checking method """
     def __init__(self, value):
         self.value = value
