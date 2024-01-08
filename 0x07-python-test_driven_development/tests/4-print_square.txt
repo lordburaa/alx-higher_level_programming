@@ -9,3 +9,8 @@ Usage:
 	>>> print_square(2)
 	##
 	##
+
+	>>> print_square(-7)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+	
