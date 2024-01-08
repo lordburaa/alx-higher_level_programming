@@ -1,31 +1,49 @@
-The ``0-add_integrer`` module
+The 0-add_integrer module
 ==========================
 
 Using 'add_intege''
-Importing the function from the module:
-	>>>add_integer = __import__("0-add_integer").add_integer
 
 
+Importing  function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+	
+	
 Checking regular addition:
-	>>>add_integer(2, 3)
+	>>> add_integer(2, 3)
 	5
 
 Checking negtive:
-	>>>add_integer(2, -6)
+	>>> add_integer(2, -6)
 	-4
 
 Checking negative with negative:
-	>>add_integer(-2, -3)
+	>> add_integer(-2, -3)
 	-5
 
 Checking float with int:
-	>>>add_integer(2.1, 4)
+	>>> add_integer(2.1, 4)
 	6
 
 Checking int with float:
-	>>>add_integer(2, 4.1)
+	>>> add_integer(2, 4.1)
 	6
+
 Checking float with float:
-	>>>add_integer(4.4, 4.6)
+	>>> add_integer(4.4, 4.6)
 	8
 
+Checking letter and a number (a = "alx", b = 5)
+	>>> add_integer("alx", 5)
+	Traceback (most recent call last):
+		...
+	ValueError: a must be an integer
+
+Checking an int and string (a = 6, b = "alx")
+	>>> add_integer(6, "alx")
+	Traceback (most recent call last):
+		...
+	ValueError: b must be an integer
+
+Checking an int and empty ()
+	>>> add_integer(5)
+	103
