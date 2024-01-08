@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""new add"""
 
-def add_intever(a, b=98):
+
+def add_integer(a, b=98):
     """adding ineger
     """
     flag = 0
