@@ -1,0 +1,6 @@
+"""This is testing the sorted list"""
+
+Checking for method docstring:
+	>>>mod = __import("1-my_list").myList.print_sorted.__doc__
+	>>>len(mod) > 1
+	True
