@@ -8,5 +8,10 @@ Base  geometry
 		...
 	ValueError: my_int must be greater than 0
 	
+	>>> integer_validator("alx", "bura")
+	Traceback (most recent call last):
+		...
+	TypeError: my_int must be an integer
+	
 
 		
