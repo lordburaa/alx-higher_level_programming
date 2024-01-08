@@ -1,7 +1,15 @@
 Base  geometry
 
+Importing the functon from the module:
+	>>> m = __import__("7-base_geometry").BaseGeometry
+
+Checking the module docsring:
+	>>> m = __import__("7-base_geometry").__doc__
+	>>> len(m) > 1
+	True
 
 	>>> integer_validator("alx", 56):
+
 
 	>>> integer_validator("alx",-4)
 	Traceback (most recent call last):
