@@ -1,0 +1,7 @@
+Base  geometry
+
+
+	>>> integer_validator("alx", 56):
+	
+
+		
