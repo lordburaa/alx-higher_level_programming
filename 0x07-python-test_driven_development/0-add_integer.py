@@ -6,7 +6,7 @@ def add_integer(a, b=98):
     """adding ineger
     """
     flag = 0
-    if not isinstance(a, (int, float)) or a = None:
+    if not isinstance(a, (int, float)) or a == None:
         flag = 1
         raise ValueError("a must be an integer")
     else:
