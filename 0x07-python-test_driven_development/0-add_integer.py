@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""new add"""
+"""new add
+    integer two number
+    two argument 
+    must be an integer
+"""
 
 
 def add_integer(a, b=98):
-    """adding ineger
+    """doc
+        Cheking the addition and change to int
     """
     flag = 0
     if not isinstance(a, (int, float)) or a == None:
