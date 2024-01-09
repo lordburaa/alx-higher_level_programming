@@ -11,6 +11,9 @@ def read_file(filename=""):
         file already exit
     """
 
-    with open(filename, 'r', encoding="utf-8") as f:
-        read = f.readlines()
-        print(read)
+    with open(filename, 'r', encoding="UTF8") as f:
+        while True:
+            read = f.readline()
+            if not read:
+                break
+            print(read, end="")
