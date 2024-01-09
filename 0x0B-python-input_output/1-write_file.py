@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-""" 
+"""
     write to the file
 """
+
+
 def write_file(filename="", text=""):
     """
         if the file exit overwrite the file
@@ -21,5 +23,3 @@ def write_file(filename="", text=""):
             for i in range(len(word)):
                 count = count + 1
     return count
-
-
