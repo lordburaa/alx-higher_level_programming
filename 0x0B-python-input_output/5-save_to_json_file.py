@@ -12,5 +12,5 @@ def save_to_json_file(my_obj, filename):
 
     form = json.dumps(my_obj)
 
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding="utf-8") as f:
         f.write(form)
