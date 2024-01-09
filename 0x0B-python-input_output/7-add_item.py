@@ -10,6 +10,6 @@ if __name__ == "__main__":
     new = sys.argv[1:]
 
     new = load_from_json_file('add_item.json')
-    new += sys.argv[1:]
+    new += sys.argv[1:-1]
 
     save_to_json_file(new, 'add_item.json')
