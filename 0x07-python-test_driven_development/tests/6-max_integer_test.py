@@ -21,7 +21,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_with0(self):
         """cheking with zero"""
-        self.assertEqual(len([]), 0)
+        self.assertEqual(max_integer([]), None)
 
 if __name__ == '__main__':
     unittest.main()
