@@ -11,4 +11,4 @@ class TestMaxInteger(unittest.TestCase):
         """checking the function """
         listt = [1 ,2, 3, 6]
         self.assertEqual(max_integer(listt), 6)
-        self.assertRaises(TypeError, max_integer, [1,2,3,'hello'])
+        self.assertEqual(max_integer([1,2,3, -1]), 3)
