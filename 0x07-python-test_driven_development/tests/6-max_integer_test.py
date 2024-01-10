@@ -16,7 +16,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertNotEqual(len([]), 5)
 
     def test_maxx(self):
-       """checking the list"""
+        """checking the list"""
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
 if __name__ == '__main__':
