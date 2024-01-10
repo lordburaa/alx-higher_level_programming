@@ -22,6 +22,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_with0(self):
         """cheking with zero"""
         self.assertEqual(max_integer([]), None)
+    def test_negative(self):
+        """chek=cking the negative number"""
+        self.assertEqual(max_integer([-1, -5, -6]), -1)
 
 if __name__ == '__main__':
     unittest.main()
