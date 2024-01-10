@@ -14,3 +14,6 @@ class TestMaxInteger(unittest.TestCase):
         """cheking the list"""
         
         self.assertEqual(len([]), 0)
+
+if __name__ == '__main__':
+    unittest.main()
