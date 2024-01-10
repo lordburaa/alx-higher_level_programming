@@ -10,7 +10,7 @@ class TestMaxInteger(unittest.TestCase):
             """testing the module docstring"""
             m = __import__('6-max_integer').__doc__
             self.assertTrue(len(m) * 1)
-    def Type_list(self):
+    def test_list(self):
         """cheking the list"""
         
         self.assertNotEqual(len([1,3,4,7]), 0)
