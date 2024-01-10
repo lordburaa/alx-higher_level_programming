@@ -8,3 +8,7 @@ tEST CASE
 	Traceback (most recent call last):
 	...
 	ValueError: setting an array element with a sequence.
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4, 5]])
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
