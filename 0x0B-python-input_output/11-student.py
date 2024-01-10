@@ -27,8 +27,9 @@ class Student:
                         new_dict[satr] = obj[satr]
             return new_dict
         return obj
-    
 
     def reload_from_json(self, json):
-            
-        return self.update(json)
+        """replace all attributes of the student
+        """
+        for k, v in json.items():
+            setattr(self, k, v)
