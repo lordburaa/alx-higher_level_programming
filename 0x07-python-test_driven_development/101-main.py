@@ -10,6 +10,6 @@ m_b = [
         [-2.9, 4.4],
         [7.2, 4.4]
         ]
-print(lazy_matrix_mul(m_a, m_b))
+print(lazy_matrix_mul())
 exit()
 print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6, 7]]))

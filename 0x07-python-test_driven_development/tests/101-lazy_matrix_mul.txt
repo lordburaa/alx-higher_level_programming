@@ -43,3 +43,7 @@ tEST CASE
 	>>> print(lazy_matrix_mul(m_a, m_b))
 	[[ 34.69   55.44 ]
 	 [-78.61   29.018]]
+	>>> print(lazy_matrix_mul())
+	Traceback (most recent call last):
+	...
+	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
