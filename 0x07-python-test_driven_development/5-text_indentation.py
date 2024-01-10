@@ -30,4 +30,3 @@ def text_indentation(text):
                 count = count + 1
             continue
         count = count + 1
-
