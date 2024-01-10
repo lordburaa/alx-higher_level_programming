@@ -13,4 +13,4 @@ class TestMaxInteger(unittest.TestCase):
     def test_list(self):
         """cheking the list"""
         
-        self.assertNotEqual(len([1,3,4,7]), 0)
+        self.assertEqual(len([]), 0)
