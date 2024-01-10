@@ -19,3 +19,7 @@ tEST CASE
 	... ]
 	>>> print(lazy_matrix_mul(m_a, m_b))
 	[[13 16]]
+	>>> print(lazy_matrix_mul(None, None))
+	Traceback (most recent call last):
+	...
+	TypeError: Object arrays are not currently supported
