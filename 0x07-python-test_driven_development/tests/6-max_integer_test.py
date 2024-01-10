@@ -11,4 +11,4 @@ class TestMaxInteger(unittest.TestCase):
 #        """checking the function """
     listt = [1 ,2, 3, 6]
 #   assertEqual(max_integer(listt), 6)
-    assert max_integer([1,3,5,9,0]) == 9
+    assert max_integer(listt) == 6
