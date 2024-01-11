@@ -46,3 +46,7 @@ how ot use 100-matrix_mul.py
 	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
 	TypeError: each row of m_b must should be of the same size
+	
+	>>> print(matrix_mul([[1, 2]], [[{"a": 1}, 8.8]]))
+	Traceback (most recent call last):
+	TypeError: m_b should contain only integers or floats
