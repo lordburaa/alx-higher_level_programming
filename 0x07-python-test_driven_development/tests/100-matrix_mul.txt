@@ -21,3 +21,7 @@ how ot use 100-matrix_mul.py
 	>>> print(matrix_mul("not list", "also not a list"))
 	Traceback (most recent call last):
 	TypeError: m_a must be a list
+	
+	>>> print(matrix_mul([[1, 2]], "also not a list"))
+	Traceback (most recent call last):
+	TypeError: m_b must be a list
