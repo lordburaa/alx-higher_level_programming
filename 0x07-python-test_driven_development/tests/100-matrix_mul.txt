@@ -55,3 +55,11 @@ how ot use 100-matrix_mul.py
 	>>> print(matrix_mul([[1, 2]], [[]]))
 	Traceback (most recent call last):
 	ValueError: m_b can't be empty
+
+	>>> print(matrix_mul([[]], []))
+	Traceback (most recent call last):
+	ValueError: m_a can't be empty
+
+	>>> print(matrix_mul([], [[1, 2]]))
+	Traceback (most recent call last):
+	ValueError: m_a can't be empty
