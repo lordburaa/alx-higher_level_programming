@@ -8,7 +8,7 @@ void print_python_string(PyObject *p)
 {
 	long int length;
 
-	fflush(stout);
+	fflush(stdout);
 
 	printf("[.] string object info\n");
 	if (strcmp(p->ob_type->tp_name, "str") != 0)
@@ -24,6 +24,6 @@ void print_python_string(PyObject *p)
 	else
 		printf(" type: compact unicoe object\n");
 
-	printf(" length: %ls\n", length);
+	printf(" length: %ld\n", length);
 	printf(" value: %ls\n", PyUnicode_AsWideCharString(p, &length));
 }

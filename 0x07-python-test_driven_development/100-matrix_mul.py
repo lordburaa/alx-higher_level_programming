@@ -1,80 +1,34 @@
 #!/usr/bin/python3
 
+""" moule containing that multiplies 2 matricies """
+
+
 def matrix_mul(m_a, m_b):
-    """matrix multiplication"""
+    """ multiply two matrices """
 
-    row2 = len(m_b)
-    row1 = len(m_a)
-    col1 = 0
-    cap = 0
+    if not isinstance(m_a, list):
+        raise TypeError("m_a must be a list")
+    if not isinstance(m_b, list):
+        raise TypeError("m_b must be a list")
 
-    #checking the matrix if empty
-    for i in m_a:
-        if len(i) == 0:
-            raise TypeError("m_a can't be empty")
+    if not all(isinstance(row, list) for row in m_a):
+        raise TypeError("m_a must be a list of lists")
+    if not all(isinstance(row, list) for row in m_b):
+        raise TypeError("m_b must be a list of lists")
 
-    if len(m_a) == 0:
-        raise TypeError("m_a can't be empty")
+    if m_a == [] or m_a == [[]]:
+        raise ValueError("m_a can't be empty")
+    if m_b == [] or m_b == [[]]:
+        raise ValueError("m_b can't be empty")
 
+    if not all((isinstance(element, int) or isinstance(element, float))
+               for element in [number for row in m_a for number in row]):
+        raise TypeError("m_a should contain only integers or floats")
+    if not all((isinstance(element, int) or isinstance(element, float))
+               for element in [number for row in m_b for number in row]):
+        raise TypeError("m_b should contain only integers or floats")
 
-
-    for i in m_b:
-        if len(i) == 0:
-            raise TypeError("m_b can't be empty")
-
-    if len(m_b) == 0:
-        raise TypeError("m_b can't be empty")
-#checking the int or float if it contain
-    
-
-
-
-
-
-
-
-
-    for check_col in m_a:
-        col1 = len(check_col)
-
-    out = 1
-
-    for check in m_a:
-        if len(check) != col1:
-            out = 0
-            break
-
-    if (out == 0):
-        print("the leng is not the same for the secnt matrix")
-        exit()
-    for i in m_b:
-        col2 = len(i)
-        break
-
-    for flag in m_b:
-        if len(flag) == col2:
-
-            cap = 1
-            continue
-        else:
-            cap = 0
-            break
-    if cap == 0:
-        print(" the column are not the same ")
-        exit()
-    if  (row2 != col1):
-        print("multiplication of the row by colmn is imporsible")
-        exit()
-
-    if cap == 1 and row2 == col1:
-
-        mul_arr = [[0] * col2 for _ in range(row1)]
-
-        for i in range(row1):
-            for k in range(col2):
-                for j in range(col1):
-                    mul_arr[i][k] += m_a[i][j] * m_b[j][k]
-
-    return mul_arr
-
-
+    if not all(len(row) == len(m_a[0]) for row in m_a):
+        raise TypeError("each row of m_a must should be of the same size")
+    if not all(len(row) == len(m_b[0]) for row in m_b):
+        raise TypeError("each row of m_b must should be of the same size")
