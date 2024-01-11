@@ -16,3 +16,8 @@ how ot use 100-matrix_mul.py
 	>>> print(matrix_mul([[1, "non"]], [[3, 4]]))
 	Traceback (most recent call last):
 	TypeError: m_a should contain only integers or floats
+
+
+	>>> print(matrix_mul("not list", "also not a list"))
+	Traceback (most recent call last):
+	TypeError: m_a must be a list
