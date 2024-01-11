@@ -9,6 +9,10 @@ how ot use 100-matrix_mul.py
 	... [1, 2],
 	... [3, 4],
 	... ]
-	... m_b = m_a
+	>>> m_b = m_a
 	>>> print(matrix_mul(m_a, m_b))
 	[[7, 10], [15, 22]]
+
+	>>> print(matrix_mul([[1, "non"]], [[3, 4]]))
+	Traceback (most recent call last):
+	TypeError: m_a should contain only integers or floats
