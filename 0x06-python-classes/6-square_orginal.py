@@ -5,7 +5,7 @@
 class Square:
     """Empty clas"""
 
-    def __init__(self, size=0, position=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Intialize """
         """if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -27,24 +27,8 @@ class Square:
             return self.__size ** 2
 
     def my_print(self):
-        if self.__size == 0:
-            print()
-        else:
-            flag =  self.__position
-
-            if isinstance(flag, tuple):
-
-                for i in range(flag[1]):
-                    print()
-                
-            for i in range(self.__size):
-                if isinstance(flag, tuple):
-
-                    for _ in range(flag[0]):
-                        print("_", end="")
-                for i in range(self.__size):
-                    print('#', end="")
-                print()
+        """print the square"""
+        print(self.pos_print(), end='')
 
     @property
     def size(self):
@@ -67,49 +51,32 @@ class Square:
 
     @property
     def position(self):
-        if isinstance(position, tuple):
-            flag = self.__position
-            if isinstance(flag[0], int) and isinstance(flag[1], int):
-                return self.__position
-            else:
-                raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        return self.__position
 
     @position.setter
-    
-    def position(self, position):
-        if not isinstance(position, tuple):
+    def position(self, value):
+        flag = 1
+        if len(value) != 2:
+            flag = 0
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-
-            if isinstance(position[0], int) and isinstance(position[1], int):
-                self.__position = position
-            else:
+        for i in value:
+            if not isinstance(i, int) or i < 0:
+                flag = 0
                 raise TypeError("position must be a tuple of 2 positive integers")
+        if flag == 1:
+            self.__position = value
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+    def pos_print(self):
+        """positin in spaces"""
+        pos = ""
+        if self.size == 0:
+            return "\n"
+        for i in range(self.position[1]):
+            pos += "\n"
+        for i in range(self.size):
+            for k in range(self.position[0]):
+                pos += " "
+            for h in range(self.size):
+                pos += "#"
+            pos += "\n"
+        return pos
