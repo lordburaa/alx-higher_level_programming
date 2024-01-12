@@ -15,29 +15,29 @@ class Node:
         self.data = data
         self.next_node = next_node
 
-        @property
-        def data(self):
-            """get data value of node """
-            return self.__data
+    @property
+    def data(self):
+        """get data value of node """
+        return self.__data
 
-        @data.setter
-        def data(self, value):
-            if type(value) is int:
-                self.__data = value
-            else:
-                raise TypeError("data must be an integer")
+    @data.setter
+    def data(self, value):
+        if type(value) is int:
+            self.__data = value
+        else:
+            raise TypeError("data must be an integer")
 
-        @property
-        def next_node(self):
-            """Gets the next  node"""
-            return self.__next_node
+    @property
+    def next_node(self):
+        """Gets the next  node"""
+        return self.__next_node
 
-        @next_node.setter
-        def next_node(self, value):
-            if type(value) is Node or value is None:
-                self.__next_node = value
-            else:
-                raise TypeError("next_node must be a Node object")
+    @next_node.setter
+    def next_node(self, value):
+        if type(value) is Node or value is None:
+            self.__next_node = value
+        else:
+            raise TypeError("next_node must be a Node object")
 
 
 class SinglyLinkedList():
