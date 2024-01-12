@@ -29,6 +29,10 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
+            if isinstance(self.__position, tuple):
+                for i in range(self.__position[1]):
+                    print()
+                
         else:
             flag =  self.__position
 
@@ -42,7 +46,7 @@ class Square:
 
                     for _ in range(flag[0]):
                         print("_", end="")
-                for i in range(self.__size):
+                for _ in range(self.__size):
                     print('#', end="")
                 print()
 
