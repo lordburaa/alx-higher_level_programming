@@ -76,7 +76,7 @@ class Square:
             if isinstance(flag[0], int):
                 if isinstance(flag[1], int):
                     return self.__position
-                raise TypeError("positin must be atuple of 2 positive integers")
+                raise TypeError("positin must be a tuple of 2 positive integers")
             else:
                 raise TypeError("position must be a tuple of 2 positive integers")
         else:
