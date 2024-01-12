@@ -73,8 +73,10 @@ class Square:
     def position(self):
         if isinstance(position, tuple):
             flag = self.__position
-            if isinstance(flag[0], int) and isinstance(flag[1], int):
-                return self.__position
+            if isinstance(flag[0], int):
+                if isinstance(flag[1], int):
+                    return self.__position
+                raise TypeError("positin must be atuple of 2 positive integers")
             else:
                 raise TypeError("position must be a tuple of 2 positive integers")
         else:
