@@ -33,7 +33,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             return self.__size
- 
+
     @size.setter
     def size(self, value):
         """Set a new value"""
