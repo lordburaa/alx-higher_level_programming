@@ -32,13 +32,13 @@ class Square:
         else:
             flag =  self.__position
 
-            if isinstance(flag, tuple):
+            if isinstance(self.__position, tuple):
 
                 for i in range(flag[1]):
                     print()
                 
             for i in range(self.__size):
-                if isinstance(flag, tuple):
+                if isinstance(self.__position, tuple):
 
                     for _ in range(flag[0]):
                         print("_", end="")
@@ -87,29 +87,3 @@ class Square:
                 self.__position = position
             else:
                 raise TypeError("position must be a tuple of 2 positive integers")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
