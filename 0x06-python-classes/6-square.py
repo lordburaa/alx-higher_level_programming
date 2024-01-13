@@ -32,15 +32,13 @@ class Square:
             if isinstance(self.__position, tuple):
                 for i in range(self.__position[1]):
                     print()
-                
         else:
-            flag =  self.__position
+            flag = self.__position
 
             if isinstance(self.__position, tuple):
 
                 for i in range(flag[1]):
                     print()
-                
             for i in range(self.__size):
                 if isinstance(self.__position, tuple):
 
@@ -76,23 +74,28 @@ class Square:
             if isinstance(flag[0], int):
                 if isinstance(flag[1], int):
                     return self.__position
-                raise TypeError("position must be a tuple of 2 positive integers")
+                else:
+                    raise TypeError("position must be a tuple
+                                    of 2 positive integers")
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple
+                                of 2 positive integers")
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple
+                            of 2 positive integers")
 
     @position.setter
-    
     def position(self, value):
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            if isinstance(value[0], int) and isinstance(value[1], int) and len(value) == 2:
-                if value[0] < 0 or  value[1] < 0:
-                    raise TypeError("position must be a tuple of 2 positive integers")
+            if isinstance(value[0], int) and isinstance(value[1], int):
+                if (value[0] < 0 or value[1] < 0) or len(value) != 2:
+                    raise TypeError("position must be a tuple
+                                    of 2 positive integers")
                 else:
 
                     self.__position = value
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple
+                                of 2 positive integers")
