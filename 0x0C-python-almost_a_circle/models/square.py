@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Defining square"""
 
@@ -11,14 +12,16 @@ class Square(Rectangle):
         """initalization"""
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
-        return "[Square] ({}) <{}>/<{}> - <{}>".format(self.id, self.x, self.y, self.width)
-    
+        """print formalized output"""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.width)
+
     @property
     def size(self):
+        """retrive size"""
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """
@@ -28,12 +31,12 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        
+
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-            
+        """upate"""
         if len(args) == 0:
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
