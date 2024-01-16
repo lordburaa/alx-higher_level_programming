@@ -110,7 +110,7 @@ class Rectangle(Base):
                                                 self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-
+        """upate"""
         if len(args) == 0:
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
