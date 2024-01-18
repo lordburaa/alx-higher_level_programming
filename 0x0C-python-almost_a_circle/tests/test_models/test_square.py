@@ -28,7 +28,7 @@ class TestSquare(unittest.TestCase):
 
     def test_size_string(self):
         """Test size with string"""
-        with self.assetRaises(TypeError) as e:
+        with self.assertRaises(TypeError) as e:
             s1 = Square("5k")
             self.assertEqual(e, "width must be an integer")
 

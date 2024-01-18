@@ -13,7 +13,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 2)
         self.assertEqual(r1.id, 1)
 
-    def with_all_arguments(self):
+    def tesst_with_all_arguments(self):
         """Tests with all vali argumets"""
         Base._Base__nb_object = 0
         r3 = Rectangle(10, 2, 0, 0, 12)
@@ -25,7 +25,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_for_private_height(self):
         """test for height as private attribute"""
-        self.assertFalse(hasattr(Rectangle, "__height")
+        self.assertFalse(hasattr(Rectangle, "__height"))
 
     def test_for_private_x(self):
         """Tests for x as private attribute"""
@@ -33,16 +33,16 @@ class TestRectangle(unittest.TestCase):
 
     def test_for_private_y(self):
         """Test fro y as private attribute"""
-        self.assertFasle(hasattr(Rectangle, "__y"))
+        self.assertFalse(hasattr(Rectangle, "__y"))
 
     def widht_setter_width_int(self):
         """Test width setter andd getter with integer"""
         Base.__Base__nb_objects = 0
         r3 = Rectangle(2, 3)
         r3.width = 5
-        self.assetEqual(r3.width, 5)
+        self.assertEqual(r3.width, 5)
 
-    def height_setter_getter_with_int(self):
+    def test_height_setter_getter_with_int(self):
         """test height setter an dgetter with integers"""
         Base._Base__nb_objects = 0
         r3 = Rectangle(2, 3)
@@ -50,7 +50,7 @@ class TestRectangle(unittest.TestCase):
         self.height =5
         self.assertEqual(r3.height, 5)
 
-    def width_setter_getterwith_other_type(self):
+    def test_width_setter_getterwith_other_type(self):
         """Test width setter and getter with string"""
         Base._Base__nb_objects = 0
         r3 = Rectangle(2, 3)
