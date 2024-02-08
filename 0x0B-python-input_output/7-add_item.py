@@ -11,7 +11,7 @@ def add_item(*args):
     """add all argument to a pyton list and save them to a file"""
 
     filename="add_item.json"
-    l = load_from_json_file
+    l = load_from_json_file(filename)
     for i in args:
         l.append(i)
 
