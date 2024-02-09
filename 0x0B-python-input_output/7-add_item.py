@@ -16,5 +16,4 @@ else:
     new = []
 if sys.argv[1:]:
     new.extend(sys.argv[1:])
-print("checking\t",new)
 save_to_json_file(new, filename)
