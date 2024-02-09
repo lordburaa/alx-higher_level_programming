@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-    json
-
+    class json
 """
+
+import json
 
 
 def class_to_json(obj):
-    """class to json format """
+    """ function retnrs thedictionary description with simple data structure"""
 
     return obj.__dict__
