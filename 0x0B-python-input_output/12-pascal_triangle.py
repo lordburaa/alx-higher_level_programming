@@ -14,8 +14,6 @@ def pascal_triangle(n):
         tmp = add(tmp, i, n)
         pascal_tr.append(tmp)
 
-        if i == 6:
-            return pascal_tr
 
     return pascal_tr
 
