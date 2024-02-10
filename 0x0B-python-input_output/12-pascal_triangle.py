@@ -11,7 +11,7 @@ def pascal_triangle(n):
         return pascal_tr
     """
     for i in range(1, n+1):
-        tmp = add(tmp, i)
+        tmp = add(tmp, i, n)
         pascal_tr.append(tmp)
 
         if i == 6:
@@ -20,10 +20,12 @@ def pascal_triangle(n):
     return pascal_tr
 
 
-def add(old, n):
+def add(old, n, size):
     """add the value side to each other  """
     list_new = []
     summ = 0
+    if size <= 0:
+        return list_new
     if len(old) == 1:
         old = [1, 1]
     else:
