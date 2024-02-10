@@ -6,6 +6,9 @@ def pascal_triangle(n):
     """pascal triangle"""
     tmp = [0]
     pascal_tr = []
+    
+    if n <= 1:
+        return pascal_tr
 
     for i in range(1, n+1):
         tmp = add(tmp, i)
