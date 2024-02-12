@@ -8,6 +8,7 @@ class Base:
     """Base Calss """
 
     __nb_objects = 0
+
     def __init__(self, id=None):
         """init"""
         if id is not None:
