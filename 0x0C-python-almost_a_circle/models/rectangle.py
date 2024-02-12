@@ -37,22 +37,22 @@ class Rectangle(Base):
         return self.__y
 
     # setter method for attribute
-    @setter.width
+    @width.setter
     def width(self, width):
         """width setter method"""
         self.__width = width
 
-    @setter.height
+    @height.setter
     def height(self, height):
         """height setter method"""
         self.__height = height
 
-    @setter.x
+    @x.setter
     def x(self, x):
         """x setter method"""
         self.__x = x
 
-    @setter.y
+    @y.setter
     def y(self, y):
         """y setter method"""
         self.__y = y
