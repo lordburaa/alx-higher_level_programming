@@ -16,8 +16,11 @@ class Rectangle(Base):
         super().__init__(id)
 
     def __str__(self):
-        return f"[{Rectangle.__name__}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        """str method"""
+        return ("[{}] ({}) {}/{} - {}/{}".format(Rectangle.__name__,
+                self.id, self.__x, self.__y, self.__width, self.__height))
     # Getter method
+
     @property
     def width(self):
         """width attribute"""
