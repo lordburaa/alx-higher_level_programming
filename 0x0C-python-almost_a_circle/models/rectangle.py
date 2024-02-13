@@ -88,9 +88,9 @@ class Rectangle(Base):
         y = ['\n' * (self.__y - 1)]
 
         char = ['#' * self.__width for _ in range(self.__height)]
-        #changing the x list to char
+        # changing the x list to char
         x_join = ''.join(x)
-        #join the char and string x_join
+        # join the char and string x_join
         x_char = [x_join + i for i in char]
         display = '\n'.join(x_char)
         if self.__y != 0:
