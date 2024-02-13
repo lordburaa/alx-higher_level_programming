@@ -96,3 +96,9 @@ class Rectangle(Base):
         if self.__y != 0:
             print(''.join(y))
         print(display)
+
+    def update(self, *args):
+        """assigns an argument to each attribute"""
+        list_t = ["id", "width", "height", "x", "y"]
+        for i in range(len(args)):
+            setattr(self, list_t[i], args[i])
