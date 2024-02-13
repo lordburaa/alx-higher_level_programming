@@ -84,6 +84,15 @@ class Rectangle(Base):
 
     def display(self):
         """display the Rectangle instnace(area) using character #"""
+        x = [' ' * self.__x]
+        y = ['\n' * (self.__y - 1)]
+
         char = ['#' * self.__width for _ in range(self.__height)]
-        display = '\n'.join(char)
+        #changing the x list to char
+        x_join = ''.join(x)
+        #join the char and string x_join
+        x_char = [x_join + i for i in char]
+        display = '\n'.join(x_char)
+        if self.__y != 0:
+            print(''.join(y))
         print(display)
