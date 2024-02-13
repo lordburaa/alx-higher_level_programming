@@ -84,7 +84,6 @@ class Rectangle(Base):
 
     def display(self):
         """display the Rectangle instnace(area) using character #"""
-        for _ in range(self.__height):
-            for _ in range(self.__width):
-                print("#", end="")
-            print()
+        char = ['#' * self.__width for _ in range(self.__height)]
+        display = '\n'.join(char)
+        print(display)
