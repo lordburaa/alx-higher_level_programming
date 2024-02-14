@@ -36,6 +36,7 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    @staticmethod
     def to_dictionary(self):
         """RETURN the dictionary representation fo Square
             The dictionary conatin:
