@@ -25,7 +25,7 @@ class Base:
         str_t = str(list_t)
         if not list_dictionaries:
             return str_t
-        elif isinstance(list_dictionaries, dict):
+        elif list_dictionaries is None:
             return str_t
         else:
             json_string = json.dumps(list_dictionaries)
