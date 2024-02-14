@@ -36,3 +36,12 @@ class Base:
                 return str_t
 
             return (json_string)
+
+    @classmethod
+    def save_to_file(cls, list_obj):
+        """write the JSON string representatio of list_objs to a file"""
+        filename = f"{cls.__name__}.json"
+        with open(filename, "w"):
+            
+            load_json = json.dump(cls.to_json_string, filename)
+
