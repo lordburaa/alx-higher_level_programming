@@ -30,4 +30,9 @@ class Base:
             return str_t
         else:
             json_string = json.dumps(list_dictionaries)
+            try:
+                lo = json.loads(json_string)
+            except json.JSONDecoderError as e:
+                return str_t
+
             return (json_string)
