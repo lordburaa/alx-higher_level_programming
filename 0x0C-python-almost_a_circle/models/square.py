@@ -13,7 +13,9 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return f"[{self.__class__.__name__}] ({self.id}) {super().x}/{super().y} - {super().height}"
+        """str overiding the Rectangle class"""
+        return f"[{self.__class__.__name__}] ({self.id})\
+                {super().x}/{super().y} - {super().height}"
 
 #    @property
 #    def size(self):
