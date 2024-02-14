@@ -12,7 +12,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
         Square.nc_class += 1
+        self.width, self.height = size
 
     def __str__(self):
         return f"[Square] ({Square.nc_class}) {self.x}/{self.y} - {self.width}"
-
