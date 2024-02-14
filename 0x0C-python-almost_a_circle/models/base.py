@@ -28,6 +28,8 @@ class Base:
             return str_t
         elif list_dictionaries is None:
             return str_t
+        elif not isinstance(list_dictionaries, dict):
+            return str_t
         else:
             json_string = json.dumps(list_dictionaries)
             return (json_string)
