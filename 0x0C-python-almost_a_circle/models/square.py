@@ -16,7 +16,7 @@ class Square(Rectangle):
         Square.nc_class += 1
 
     def __str__(self):
-        return f"[{self.__class__.__name__}] ({Square.nc_class}) {self.x}/{self.y} - {self.width}"
+        return f"[{self.__class__.__name__}] ({Square.nc_class}) {super().x}/{super().y} - {super().width}"
 
 #    @property
 #    def size(self):
