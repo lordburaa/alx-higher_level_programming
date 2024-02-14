@@ -110,6 +110,6 @@ class Rectangle(Base):
     def to_dictionary(self):
         """return the dictionary representation of retangle"""
         obj_dic = {'id': self.id, 'width': self.width,
-                    'height': self.height, 'x': self.x, 'y': self.y}
-        
+                   'height': self.height, 'x': self.x, 'y': self.y}
+
         return obj_dic
