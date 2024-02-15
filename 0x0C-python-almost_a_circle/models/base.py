@@ -46,4 +46,4 @@ class Base:
         else:
             new = [obj.to_dictionary() for obj in list_objs]
         with open(filename, "w") as file:
-            json.dump(new, file)
+            file.write(Base.to_json_string(new))
