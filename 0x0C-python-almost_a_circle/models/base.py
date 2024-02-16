@@ -63,7 +63,10 @@ class Base:
         """return an instance with all attribute already set"""
         width = dictionary.get('width', 0)
         height = dictionary.get('height', 0)
-        up = cls(width, height)
+        x = dictionary.get('x', 0)
+        y = dictioanry.get('y', 0)
+        id = dictionaory.get('id', None)
+        up = cls(width, height, x, y, id)
         up.update(**dictionary)
 
         return up
