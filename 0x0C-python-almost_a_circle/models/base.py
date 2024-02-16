@@ -62,7 +62,7 @@ class Base:
     def create(cls, **dictionary):
         """return an instance with all attribute already set"""
         if cls.__name__ == "Rectangle":
-            up = cls(1,1)
+            up = cls(1, 1)
         else:
             up = cls(1)
         up.update(**dictionary)
