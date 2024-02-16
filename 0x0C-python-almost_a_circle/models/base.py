@@ -61,7 +61,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """return an instance with all attribute already set"""
-
-        up = cls(**dictionary)
+        width = dictionary.get('width', 0)
+        height = dictionary.get('height', 0)
+        up = cls(width, height)
+        up.update(cls, **dictionary)
 
         return up
