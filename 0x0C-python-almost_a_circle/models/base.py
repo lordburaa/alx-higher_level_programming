@@ -65,7 +65,6 @@ class Base:
         height = dictionary.get('height', 0)
         x = dictionary.get('x', 0)
         y = dictioanry.get('y', 0)
-        id = dictionaory.get('id', None)
         up = cls(width, height, x, y, id)
         up.update(**dictionary)
 
