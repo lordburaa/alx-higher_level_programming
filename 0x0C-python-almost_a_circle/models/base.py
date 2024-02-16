@@ -61,12 +61,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """return an instance with all attribute already set"""
-        width = dictionary.get('width', 0)
-        height = dictionary.get('height', 0)
-        x = dictionary.get('x', 0)
-        y = dictionary.get('y', 0)
-        id_d = dictionary.get('id')
-        up = cls(width, height, x, y, id_d)
+        if cls.__name__ == "Rectangle":
+            up = cls(1,1)
+        else:
+            up = cls(1)
         up.update(**dictionary)
 
         return up
