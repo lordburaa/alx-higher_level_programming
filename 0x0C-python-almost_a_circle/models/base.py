@@ -80,5 +80,5 @@ class Base:
             return []
 
         new = cls.from_json_string(string)
-        new = [i for i in new]
+        new = [cls.create(**instance) for instance in new]
         return new
