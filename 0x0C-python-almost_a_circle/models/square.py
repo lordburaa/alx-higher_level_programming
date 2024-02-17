@@ -14,8 +14,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """str overiding the Rectangle class"""
-        return f"[{self.__class__.__name__}] ({self.id})\
-                {super().x}/{super().y} - {super().height}"
+        return f"[Square] ({self.id})\
+                {self.x}/{self.y} - {self.height}"
 
     @property
     def size(self):
@@ -38,7 +38,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """RETURN the dictionary representation fo Square
-            The dictionary conatin:
+            The dictionary contain:
                 ->id
                 ->size
                 ->x

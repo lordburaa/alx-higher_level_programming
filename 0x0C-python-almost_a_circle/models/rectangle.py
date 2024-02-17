@@ -92,6 +92,7 @@ class Rectangle(Base):
         x_join = ''.join(x)
         # join the char and string x_join
         x_char = [x_join + i for i in char]
+        # join the end of every char in the list with new line
         display = '\n'.join(x_char)
         if self.__y != 0:
             print(''.join(y))
