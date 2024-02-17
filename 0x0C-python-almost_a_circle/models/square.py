@@ -14,8 +14,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """str overiding the Rectangle class"""
-        return f"[Square] ({self.id})\
-                {self.x}/{self.y} - {self.height}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
 
     @property
     def size(self):
