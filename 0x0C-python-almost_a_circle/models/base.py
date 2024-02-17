@@ -68,3 +68,17 @@ class Base:
         up.update(**dictionary)
 
         return up
+
+    @classmethod
+    def load_from_file(cls):
+        """load from the file"""
+        filename = f"{cls.__name__}.json"
+        try:
+            with open(filename, encoding="utf-8") as f:
+                string = f.read()
+        except FileNotFoundError as e:
+            return []
+
+        new = cls.from_json_string(string)
+        new = [i for i in new]
+        return new
