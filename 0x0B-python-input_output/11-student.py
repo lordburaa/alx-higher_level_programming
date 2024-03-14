@@ -1,35 +1,31 @@
 #!/usr/bin/python3
-""" creating class """
+"""
+ creating class
+
+"""
 
 
 class Student:
-    """student """
-
+    """ student class"""
     def __init__(self, first_name, last_name, age):
+        """instantiation """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """Method that returns direcotry description """
-        obj = self.__dict__.copy()
-        if type(attrs) is list:
-
-            for item in attrs:
-                if type(item) is not str:
-                    return obj
-
-            new_dict = {}
-
-            for attr in range(len(attrs)):
-                for satr in obj:
-                    if attrs[attr] == satr:
-                        new_dict[satr] = obj[satr]
-            return new_dict
-        return obj
+        """retireves a dictionary representatin"""
+        dic_t = {}
+        if not isinstance(attrs, type(None)):
+            for i in attrs:
+                try:
+                    dic_t[i] = getattr(self, i)
+                except AttributeError:
+                    pass
+            return dic_t
+        return self.__dict__
 
     def reload_from_json(self, json):
-        """replace all attributes of the student
-        """
-        for k, v in json.items():
-            setattr(self, k, v)
+        """That replaces all attribute of the Student isinstance:"""
+
+        
