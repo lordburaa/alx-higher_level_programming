@@ -4,4 +4,3 @@ CREATE TABLE IF NOT EXISTS unique_id(
 	name VARCHAR(256),
 	UNIQUE KEY id_unique(id)
 	);
-ALTER TABLE unique_id AUTO_INCREMENT=2;
