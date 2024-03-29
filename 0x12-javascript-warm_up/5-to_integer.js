@@ -4,7 +4,7 @@ const { argv } = require('process');
 
 const num = parseInt(argv[2]);
 
-if (isNaN(argv[2])) {
+if (Number.isNaN(num)) {
 	console.log('Not a number');
 }
 else {
