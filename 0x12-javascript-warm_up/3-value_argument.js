@@ -3,7 +3,7 @@
 const { argv } = require('process');
 
 if (typeof argv[2] === 'undefined') {
-  console.log('No argument')
+  console.log('No argument');
 } else {
   console.log(argv[2]);
 }
