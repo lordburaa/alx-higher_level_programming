@@ -5,7 +5,7 @@ if (isNaN(num)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < num; i++) {
-    let shape = 'X'.repeat(num)
-    console.log(shape);
+  let shape = 'X'.repeat(num)
+  console.log(shape);
   }
 }
