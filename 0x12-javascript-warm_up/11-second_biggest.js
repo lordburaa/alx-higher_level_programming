@@ -10,4 +10,7 @@ for (let i = 0; i < argv.length; i++) {
 		min = argv[i]
 	}
 }
+if (argv.length == 3 || argv.length == 2){
+	min = 0;
+}
 console.log(min)
