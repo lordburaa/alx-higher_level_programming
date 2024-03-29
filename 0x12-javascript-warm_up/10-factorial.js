@@ -3,7 +3,7 @@ const { argv } = require('process');
 const num = parseInt(argv[2])
 
 function fac (a) {
-  if (a === 1) {
+  if (a === 1 || isNaN(a)) {
 	  return 1;
   }
 
