@@ -1,16 +1,19 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
+let array = []
 
-let min = argv[0];
-
-for (let i = 1; i < argv.length; i++) {
-	
-	if (min < argv[i]) {
-		min = argv[i]
-	}
+for (let i = 2; i < argv.length; i++) {
+  	inn = parseInt(argv[i]);
+	array.push(inn)
 }
-if (argv.length == 3 || argv.length == 2){
-	min = 0;
+const tmp = array.sort();
+const argLength = argv.length;
+console.log(tmp);
+if (argLength < 3) {
+  console.log('0 printed');
+} else {
+  console.log('printedd in the else ocndoitoin');
+  const index = argLength - 2;
+  console.log(tmp[argLength]);
 }
-console.log(min)
