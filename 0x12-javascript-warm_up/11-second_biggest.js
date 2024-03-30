@@ -2,9 +2,9 @@
 
 const { argv } = require('process');
 
-let min = 0;
+let min = argv[0];
 
-for (let i = 0; i < argv.length; i++) {
+for (let i = 1; i < argv.length; i++) {
 	
 	if (min < argv[i]) {
 		min = argv[i]
