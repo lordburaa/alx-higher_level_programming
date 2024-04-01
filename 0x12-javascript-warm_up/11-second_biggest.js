@@ -4,16 +4,17 @@ const { argv } = require('process')
 const array = []
 
 for (let i = 2; i < argv.length; i++) {
-  	inn = parseInt(argv[i])
-  array.push(inn)
+	array.push(parseInt(argv[i]));
 }
-const tmp = array.sort()
-const argLength = argv.length
-console.log(tmp)
-if (argLength < 3) {
-  console.log('0 printed')
-} else {
-  console.log('printedd in the else ocndoitoin')
-  const index = argLength - 2
-  console.log(tmp[argLength])
+const maxx = Math.max.apply(null, array);
+
+let sd_max = 0;
+for (let i = 2; i < argv.length; i++) {
+	if (sd_max !== maxx) {
+		if (sd_max < array[i] && array[i] != maxx) {
+			sd_max = array[i];
+		}
+	}
 }
+console.log(sd_max);
+
