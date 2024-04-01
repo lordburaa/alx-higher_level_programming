@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const { argv } = require('process')
+const { argv } = require('process');
 
 function add (a, b) {
-  console.log(parseInt(a) + parseInt(b))
+  console.log(parseInt(a) + parseInt(b));
 }
-add(argv[2], argv[3])
+add(argv[2], argv[3]);
