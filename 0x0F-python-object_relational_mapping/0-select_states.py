@@ -2,8 +2,12 @@
 """
 This script liss all states from the databsee
 """
+
+
 import MySQLdb
 import sys
+
+
 if __name__ == '__main__':
     """ doc checked """
     db = MySQLdb.connect(host="localhost",
