@@ -19,3 +19,5 @@ if __name__ == '__main__':
 
     for row in r:
         print(i)
+    c.close()
+    db.close()
