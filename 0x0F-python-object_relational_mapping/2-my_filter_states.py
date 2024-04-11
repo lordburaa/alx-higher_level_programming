@@ -14,7 +14,7 @@ if __name__ == '__main__':
                          database=sys.argv[3], port=3306)
     db_c = db.cursor()
     # avoid the sql injection
-    db_c.execute("SELECT * FROM states WHERE states.name= %s\
+    db_c.execute("SELECT * FROM states WHERE states.name LIKE %s\
             ORDER BY states.id ASC", sys.argv[4])
     row_select = db_c.fetchall()
     for row in row_select:
