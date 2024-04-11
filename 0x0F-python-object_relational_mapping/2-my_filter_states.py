@@ -19,5 +19,5 @@ if __name__ == '__main__':
         row_select = db_c.fetchall()
         for row in row_selecte:
             print(row)
-    except as e:
+    except:
         pass
