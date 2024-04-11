@@ -13,8 +13,8 @@ if __name__ == '__main__':
     try:
 
         db = MySQLdb.connect(host="localhost",
-                            user=sys.argv[1], password=sys.argv[2],
-                            database=sys.argv[3], port=3306)
+                             user=sys.argv[1], password=sys.argv[2],
+                             database=sys.argv[3], port=3306)
         c = db.cursor()
         c.execute("SELECT * FROM states ORDER BY states.id ASC")
         r = c.fetchall()
