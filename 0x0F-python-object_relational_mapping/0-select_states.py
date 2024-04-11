@@ -20,7 +20,7 @@ if __name__ == '__main__':
         r = c.fetchall()
 
         for row in r:
-            print(i)
+            print(row)
         c.close()
         db.close()
     except MySQLdb.error as e:
