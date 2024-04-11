@@ -8,8 +8,8 @@ if __name__ == '__main__':
                          user=sys.argv[1], password=sys.argv[2],
                          database=sys.argv[3], port=3306)
     c = db.cursor()
-    c.execute("""SELECT * FROM states""")
+    c.execute("SELECT * FROM states")
     r = c.fetchall()
 
-    for i in r:
+    for row in r:
         print(i)
