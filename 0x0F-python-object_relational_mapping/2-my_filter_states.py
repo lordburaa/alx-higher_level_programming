@@ -14,10 +14,10 @@ if __name__ == '__main__':
                              password=sys.argv[2],
                              database=sys.argv[3], port=3306)
         db_c = db.cursor()
-        db_c.execute("SELECT * FROM states WHERE states.name={}\
+        db_c.execute("SELECT * FROM states WHERE states.name='{}'\
                 ORDER BY states.id ASC".format(sys.argv[4]))
         row_select = db_c.fetchall()
-        for row in row_selecte:
+        for row in row_select:
             print(row)
     except:
         pass
