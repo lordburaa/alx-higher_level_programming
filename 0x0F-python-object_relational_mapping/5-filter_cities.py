@@ -12,8 +12,8 @@ if __name__ == '__main__':
                          password=sys.argv[2],
                          database=sys.argv[3], port=3306)
     db_c = db.cursor()
-    db_c.execute("SELECT c.name FROM states s JOIN
-                  cities c ON s.id=c.state_id
+    db_c.execute("SELECT c.name FROM states s JOIN\
+                  cities c ON s.id=c.state_id\
                   WHERE s.name= %(name)s", {"name": sys.argv[4]})
     row = db_c.fetchone()
     while True:
