@@ -10,18 +10,12 @@ import sys
 
 if __name__ == '__main__':
     """ doc checked """
-    try:
+    db = MySQLdb.connect(host="localhost",
+                         user=sys.argv[1], password=sys.argv[2],
+                         database=sys.argv[3], port=3306)
+    c = db.cursor()
+    c.execute("SELECT * FROM states ORDER BY states.id ASC")
+    r = c.fetchall()
 
-        db = MySQLdb.connect(host="localhost",
-                             user=sys.argv[1], password=sys.argv[2],
-                             database=sys.argv[3], port=3306)
-        c = db.cursor()
-        c.execute("SELECT * FROM states ORDER BY states.id ASC")
-        r = c.fetchall()
-
-        for row in r:
-            print(row)
-        c.close()
-        db.close()
-    except MySQLdb.error as e:
-        print(e)
+    for row in r:
+        print(row)
