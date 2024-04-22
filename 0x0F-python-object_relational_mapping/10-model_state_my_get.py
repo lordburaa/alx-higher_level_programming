@@ -12,10 +12,9 @@ from sys import argv
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(argv[1], argv[2], argv[3]))
-    name = argv[4]
     session = Session(bind=engine)
-    query = session.query(State).filter(State.name == name).all()
-    if len(query) == 0:
+    query = session.query(State).filter(State.name == argv[4]).first()
+    if query is None:
         print("Not found")
     else:
-        print(query[1].id)
+        print("{0}".format(query.id))
