@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-# create new tbales;
-# if there is error in the requirement
-# you can hange it column to mapped_collumn=> sqlalchemy.orm
+"""
+create new tbales;
+if there is error in the requirement
+you can hange it column to mapped_collumn=> sqlalchemy.orm
+"""
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
