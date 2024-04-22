@@ -12,4 +12,8 @@ if __name__ == '__main__':
                            .format(argv[1], argv[2], argv[3]))
     session = Session(bind=engine)
     query = session.query(State).first()
-    print("{}: {}".format(query.id, query.name))
+    if query is None:
+        print()
+    else:
+
+        print("{}: {}".format(query.id, query.name))
