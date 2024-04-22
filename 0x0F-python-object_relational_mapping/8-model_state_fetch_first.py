@@ -13,7 +13,7 @@ if __name__ == '__main__':
     session = Session(bind=engine)
     query = session.query(State).first()
     if query is None:
-        pass
+        print("Nothing")
     else:
 
         print("{}: {}".format(query.id, query.name))
