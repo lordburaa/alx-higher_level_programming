@@ -13,5 +13,5 @@ if __name__ == '__main__':
 
     session = Session(bind=engine)
     query = session.query(State).order_by(State.id)
-    for _row in query:    
+    for _row in query:
         print("{}: {}".format(_row.id, _row.name))
