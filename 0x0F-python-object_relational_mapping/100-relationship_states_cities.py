@@ -9,9 +9,9 @@ from relationship_state import Base, State
 from relationship_city import City
 
 if __name__ == '__main__':
-    engine =create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3]))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(argv[1], argv[2], argv[3]))
     metadata = MetaData(bind=engine)
-    
     # create tables
     State.metadata.create_all(engine)
     City.metadata.create_all(engine)
@@ -31,4 +31,3 @@ if __name__ == '__main__':
     session.add(city)
 
     session.commit()
-    
