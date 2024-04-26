@@ -26,8 +26,8 @@ if __name__ == '__main__':
 
     # instancee
     state = State(name="california")
-    city = City(name="San Fransico", state_id=state.id)
+    city = City(name="SanFrasucsi")
+    state.cities.append(city)
     session.add(state)
-    session.add(city)
 
     session.commit()
