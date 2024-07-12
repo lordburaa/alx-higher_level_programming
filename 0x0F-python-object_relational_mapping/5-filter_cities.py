@@ -11,18 +11,11 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost', user=sys.argv[1],
                          password=sys.argv[2],
                          database=sys.argv[3], port=3306)
-    db_c = db.cursor()
-    db_c.execute("SELECT c.name FROM states s JOIN\
-                  cities c ON s.id=c.state_id\
-                  WHERE s.name= %(name)s", {"name": sys.argv[4]})
-    row = db_c.fetchone()
-    while True:
-        if row is None:
-            break
-        else:
-            for i in row:
-                print(i, end="")
-        row = db_c.fetchone()
-        if row is not None:
-            print(", ", end="")
-    print()
+
+    cu = db.cursor()
+    try:
+        cu.execute('SELECT c.name FROM cities c JOIN states s on s.id=c.state_id s.name="{}"'.format(sys.argv[4]))
+
+        print(cu.fetchall())
+    except:
+        print("Error found ")
