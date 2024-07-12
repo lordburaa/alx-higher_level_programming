@@ -14,6 +14,6 @@ if __name__ == '__main__':
                            .format(argv[1], argv[2], argv[3]))
     session = Session(bind=engine)
 
-    query = session.query(State, City).join(City)
+    query = session.query(State, City)
     for i in query:
         print("{}: ({}) {}".format(i[0].name, i[1].id, i[1].name))
